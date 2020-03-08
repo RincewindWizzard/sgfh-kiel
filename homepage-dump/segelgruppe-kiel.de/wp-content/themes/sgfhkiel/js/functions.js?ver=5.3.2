@@ -1,0 +1,143 @@
+jQuery(document).ready(function(){
+
+  //Lightbox fuer alle Bilder
+  jQuery("#content_wrapper img").parent().addClass("lightbox");
+  //Lightbox nicht im Kalender
+  jQuery("#jd-calendar img").parent().removeClass("lightbox");
+  
+  //Bilder: Entfernen von Breite und Hoehe
+  jQuery("#content_wrapper img").each(function() {    
+    jQuery(this)
+      .removeAttr('height')
+      .removeAttr('width') 
+      .css("max-width","100%");     
+  });  
+  //Bilder in der Galerie im Footer: Entfernen von Breite und Hoehe
+  jQuery("#gallery_footer img").each(function() {    
+    jQuery(this)
+      .removeAttr('height')
+      .removeAttr('width')   
+  });  
+  
+  
+  // Anpassung Videos (YouTube) - Skript von css-tricks.com uebernommen und angepasst
+  // Wenn kein Javascript, gibt es keine Hoehenanpassung.
+  // Find all YouTube and Vimeo videos ====> Achtung: Vimeo spielt nicht auf Mobil!
+  var allVideos = jQuery("iframe[src^='http://player.vimeo.com'], iframe[src^='http://www.youtube.com']");
+  // Figure out and save aspect ratio for each video
+  jQuery(allVideos).each(function() {    
+    jQuery(this)
+      .data('aspectRatio', this.height / this.width)  
+      // and remove the hard coded width/height
+      .removeAttr('height')
+      .removeAttr('width')
+      //Fehler Video-Ueberschneidung abstellen
+      .attr('wmode','opaque')
+      .prop("src", jQuery(this).prop("src") + "?wmode=transparent");
+  });      
+  
+  //Umschaltung auf mobiles Menue - mit Komponenten
+  var knopf="<img class='knopf' src='/wp-content/themes/sgfhkiel/images/unter_menue_button.png' alt='' title='' />"; 
+  var startwidth =jQuery(window).width();   
+    
+  if(jQuery(window).width()<496) {
+    jQuery("#menue_mobil_switch").css("display", "block");
+    jQuery("#menoben").css("display", "none");
+    jQuery("#menoben .menu li ul").css("display", "none");     
+    jQuery("#menoben .menu li.menu-parent-item").append(knopf);
+    jQuery(".knopf").click(function(){      
+      jQuery(this).parent().find('ul').animate({      
+        height: 'toggle'
+        }, 500, function() {
+          
+      });
+    });
+  }  
+  
+  // Funktionen, die bei Resize ausgefuehrt werden
+  jQuery(window).resize(function() {
+    if(jQuery(window).width()<496) {
+      if(jQuery(window).width()!=startwidth){
+        jQuery("#menue_mobil_switch").css("display", "block");  
+        jQuery("#menoben").css("display", "none");
+        jQuery("#menoben .menu li ul").css("display", "none"); 
+        jQuery("#menoben .menu li.menu-parent-item").append(knopf);           
+        startwidth=jQuery(window).width();
+        jQuery(".knopf").click(function(){
+          jQuery(this).parent().find('ul').animate({      
+            height: 'toggle'
+            }, 500, function() {
+                
+          });
+        });
+      }
+    }
+    else {
+      if(jQuery(window).width()!=startwidth){
+        jQuery("#menue_mobil_switch").css("display", "none");
+        jQuery("#menoben").css("display", "block");
+        jQuery("#menoben .menu li ul").css("display", "block");
+        jQuery("#menoben .menu li.menu-parent-item .knopf").remove();
+        startwidth=jQuery(window).width();
+      }        
+    }
+    //Teil des Skripts zur Videoanpassung      
+    // Resize all videos according to their own aspect ratio
+    jQuery(allVideos).each(function() {
+      // The element that is fluid width
+      var fluidEl = jQuery(this).parent(); 
+      var newWidth = jQuery(fluidEl).width();
+      var el = jQuery(this);
+      el
+        .width(newWidth)
+        .height(newWidth * el.data('aspectRatio'));  
+    });    
+  }).resize();
+  
+  //Slider im Footer
+  
+  function mycarousel_initCallback(carousel) {
+    // Disable autoscrolling if the user clicks the prev or next button.
+    carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+    jQuery("#cboxOverlay").hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+    jQuery("#colorbox *").hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+  };
+    
+  jQuery('#gallery_footer .gallery').jcarousel({
+    	wrap: 'circular',
+      scroll: 2,
+      auto: 2,
+      animation: 2000,
+      easing: 'swing',
+      initCallback: mycarousel_initCallback
+    });
+  
+  //Funktion des Daumenabdrucks
+  jQuery("#menue_mobil_switch").click(function(){
+    jQuery("#menoben").animate({      
+      height: 'toggle'
+      }, 500, function() {
+            
+    });
+  });   
+  
+});

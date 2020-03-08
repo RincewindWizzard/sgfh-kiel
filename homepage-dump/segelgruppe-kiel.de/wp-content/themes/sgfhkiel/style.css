@@ -1,0 +1,774 @@
+/*
+Theme Name: Segelgruppe FH Kiel
+Theme URI: 
+Description: Theme fuer Segelgruppe FH Kiel
+Author: Daniel Pfeifer, Gerwin M&uuml;ller
+Author URI: 
+*/
+
+body, html {
+  margin:0;
+  padding:0;
+}
+body {
+  background:#274278;
+  font-family: 'Source Sans Pro', Verdana, Helvetica, Sans-Serif;  
+}
+#bg {
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+}
+/* Header */
+#header_bg {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:80px;
+  background:url(./images/header_bg.png);
+}
+#logo {
+  float:left;
+  width:35.15625%;
+  margin:0;
+  padding:0;
+}  
+#wrapper {
+  position:relative;
+  width:98.4375%;
+  max-width:1260px;
+  height:100%;
+  margin: 0 auto;
+}
+#header {
+  float:left;
+  margin-top:0;
+  margin-left:0;
+  width:100%;
+  max-width:1260px;
+}
+#header a {
+  text-decoration:none;
+}
+#header a img {
+  border:none;
+}
+
+/* Menue oben rechts (Faehnchen) */ 
+#sidebar_oben {
+  float:right;
+  width:7.9365635%;
+  max-width:100px;
+  margin:0;
+  padding:0 1.5873015% 0 0;
+}
+/* fuer Wysiwig-widget */
+  /* Abstand nach oben in Browsern ausser FireFox */
+  #sidebar_oben li {
+    line-height:0;
+  }  
+  #sidebar_oben * {
+    width:100%;
+    padding:0;
+    margin:0;
+  }
+  #sidebar_oben a {
+    float:right;
+    width:40%;
+    max-width:40px;
+    margin:3px 0 0 0;
+  } 
+  img.symbol_link {
+    width:100%;
+    height:auto;
+  }
+
+
+/* alternatives Menue zu oben rechts (unter dem Content - fuer kleine Aufloesungen) */
+#sidebar_unten {
+  width:100%;
+  border-top:1px solid #FFF;
+  padding-top:20px;
+  margin-bottom:30px;
+  text-align:center;
+  display:none;
+  list-style-type:none;
+}
+#sidebar_unten .menu {
+  margin:0;
+  padding:0;
+}
+#sidebar_unten li {
+  display:inline;
+  padding:0 1em;
+  border-right:1px solid #FFF;
+}
+#sidebar_unten li:last-child {
+  border-right:none;
+}
+#sidebar_unten a {
+  color:#FFF;
+  text-decoration:none;  
+}
+#sidebar_unten a:hover {
+  color:#FF700B;
+}
+/* _____________________ Ende Menue oben rechts (Faehnchen) ____________________ */
+
+
+/* Hauptmenue Desktop */
+#menoben .menu {
+  float:right;
+  margin-top:1em;
+  margin-right:5em;
+  width:45%;
+  padding:0;
+  text-align:right;  
+}
+#menoben .menu div {
+  width:100%;
+} 
+#menoben .menu li {
+  list-style-type:none;
+  display:inline;  
+  line-height:1.7em;
+  padding:0 1.5625% 0 1.5625%;
+  border-left:1px solid transparent;
+}
+#menoben .menu > li a {
+  display:inline;
+  color:#FFF;
+  font-size:1.25em;  
+  text-decoration:none;
+  float:right;    
+}
+#menoben .menu > ul > li a {
+  text-align:center;
+}
+#menoben .menu > li > a {
+  margin-top:-0.35em;
+}
+#menoben .menu > li.menu-parent-item:hover {
+  border-left:1px solid #FFF;
+}
+#menoben .menu li:hover > a {
+  color:#FF700B;
+}
+
+#menoben .menu > li {  
+  position:relative;
+  display:inline-block;
+  margin:0.35em 1em 0 0;
+  padding-bottom:1.5em;
+}
+#menoben .menu > li > ul {
+  visibility:hidden;
+}
+
+/* Hauptmenue Ebene 2*/
+#menoben .menu > li:hover > ul {
+  visibility:visible;
+}
+#menoben .menu > li ul.sub-menu {
+  position:absolute;
+  left:-1px;  
+  top:0.5em;         
+  margin-top:1.1em;    
+  padding:1em 0 1px 0;      
+  text-decoration:none;  
+  list-style-type:none;
+  text-align:left;
+  z-index:2;
+  background:transparent url(./images/border-bottom.jpg) no-repeat bottom left;
+  border-left:1px solid #FFF;
+}
+html * #menoben .menu > li ul.sub-menu {
+  top:1.5px;
+}   
+#menoben .menu > li ul.sub-menu > li {
+  position:relative;
+  display:block;
+  padding-left:10px;  
+  font-size:0.8em;      
+  line-height:2em;
+  white-space:nowrap;
+  background:transparent;
+}
+
+#menoben .menu > li ul.sub-menu > li a {
+  width:100%;
+  display:inline-block;
+  color:#FFF;  
+  background:rgba(0,0,0,0.5);
+  padding: 0 5px;
+}
+#menoben .menu > li ul.sub-menu > li:hover a {
+  color:#FF700B;
+}
+#menoben .menu > li ul.sub-menu > li a:link, #menoben .menu > li ul.sub-menu > li a:visited, #menoben .menu > li ul.sub-menu > li a:active{
+  text-decoration:none;
+}
+#menoben .menu > li ul.sub-menu > li:hover, #menoben .menu > li ul.sub-menu > li:focus ,
+#menoben .menu > li ul.sub-menu > li a:hover, #menoben .menu > li ul.sub-menu > li a:focus {
+  cursor:pointer;
+}
+#menoben .menu > li ul.sub-menu > li ul.sub-menu {
+  visibility:hidden;
+}
+#menoben .menu > li ul.sub-menu > li:hover ul.sub-menu {
+  visibility:visible;
+  -webkit-box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.2); /* WebKit */
+  -moz-box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.2); /* Firefox */
+  box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.2); /* Standard */
+}    
+
+/* aktive Menuepunkte */
+#menoben li.current-menu-item, #menoben li.current-menu-item > a {
+  color:#FF700B;
+}
+#menoben li.current-page-parent, #menoben li.current-page-parent > a {
+  /*color:#000;*/
+  text-decoration:underline !important;
+}
+#menoben li.current-page-ancestor, #menoben li.current-page-ancestor > a {
+  /*color:#000;*/
+  text-decoration:underline !important;
+}
+
+/* _________________ Ende Hauptmenue Desktop ___________________________ */
+
+#menue_mobil_switch {  
+  width:25%;
+  margin:0 auto;
+  display:none;
+}  
+/* Hautpmenue mobil */
+#menmob_oben, #menmob_unten {
+  width:100%;
+  padding:0;
+  margin:0;
+  display:none;
+}
+#menmob_oben {
+  margin:3% 0 0 0;
+  display:none;
+}
+
+/* Footer */
+#footer {
+  position:fixed;
+  left:0;
+  bottom:0;
+  width:100%;
+  height:30px;
+  background:url(./images/header_bg.png);
+}
+#gallery_footer {
+  position:fixed;
+  left:0;
+  bottom:0;
+  width:100%;
+  height:100px;
+  overflow:hidden;
+  background:url(./images/header_bg.png);
+}
+#gallery_footer li {
+  display:inline;
+}
+
+/* Inhaltsbereich */
+#content_wrapper {
+  position:absolute;
+  width:100%;
+  left:0;
+  top:180px;
+  padding-bottom:100px;
+}
+#start_content, #content {
+  width:90%;
+  margin:3% 5%;
+  text-align:center;
+  overflow:auto;
+  font-size:1.2em;
+  color:#FFFFFF;
+}
+#content {
+  text-align:left;
+}
+#start_content {
+  text-align:center;
+}
+
+#start_content .cont_element { 
+  display:table-cell; 
+  vertical-align:top; 
+  width:27%;
+  padding:0 3%;
+  height:auto;
+  min-height:100%;
+  border-right:1px solid #FFF;
+  text-align:left;
+}
+#start_content .cont_element:last-child {
+  border-right:none;
+}
+#start_content > *, #content > * {
+  font-size:0.7em;
+}
+#start_content h2 {
+  font-size:1.25em;
+}
+#content h2 {
+  font-size:0.875em;
+}
+#start_content h3 {
+  font-size:1em;
+}
+#content h3 {
+  font-size:0.7em;
+}
+#start_content h4, #start_content h5, #start_content h6 {
+  font-size:0.8em;
+}
+#content h4, #content h5, #content h6 {
+  font-size:0.56em;
+}
+#content .entry h2 {
+  font-size:1.25em;
+}
+#content .entry h3 {
+  font-size:1em;
+}
+
+#start_content a, #content a {
+  color:#FFF;
+}
+#start_content a:hover, #content a:hover {
+  color:#FF700B;
+}
+#content .artikel {
+  border-bottom: 1px dotted #DDD;
+  margin-bottom:10px;
+}
+.alignleft {
+  float:left;
+  margin-right:10px;
+  margin-bottom:10px;
+}
+.alignright {
+  float:right;
+  margin-left:10px;
+  margin-bottom:10px;
+}
+#content_wrapper table {
+  border:1px solid #FFF;
+  border-collapse:collapse;
+}
+#content_wrapper td{
+  border:1px solid #FFF;
+  padding:5px 10px 5px 5px;
+}
+
+/* Galerie-Thumbnails */
+.attachment-thumbnail {
+  width:150px;
+  margin-right:10px;
+  border:5px solid #FFF;
+  -webkit-box-shadow: 8px 8px 4px 0px rgba(0, 0, 0, 0.5); /* WebKit */
+  -moz-box-shadow: 8px 8px 4px 0px rgba(0, 0, 0, 0.5); /* Firefox */
+  box-shadow: 8px 8px 4px 0px rgba(0, 0, 0, 0.5); /* Standard */
+}
+#gallery_footer .attachment-thumbnail {
+  width:66px;
+  height:66px;
+}
+/* Galerie im Footer */
+#gallery_footer img {
+  border:2px solid #FFF;
+}
+/* grosse Bilder */
+#content_wrapper .cont_element .entry > p > a > img { 
+  width:100%;
+}
+#content_wrapper .cont_element .entry > p > a > img.size-medium { 
+  width:300px;
+}
+#content_wrapper .cont_element .entry > p > a > img.size-thumbnail { 
+  width:150px;
+}
+#jd-calendar img {
+  width:none;
+}
+  
+/* Media-Queries */
+#header_bg {    
+  height:50px;
+}
+body {
+  font-size:10px;
+}
+@media (max-height:480px) {  
+  #gallery_footer {
+    display:none;
+  }  
+  #start_content {
+    bottom:0;
+    overflow:auto;
+  }
+} 
+
+@media (min-height:481px) {  
+  #sidebar_unten {
+    margin-bottom:130px;
+  }
+} 
+
+@media (max-width:1024px) {  
+  #start_content, #content {
+    font-size:1.7em;
+  }
+}
+
+@media (max-width:768px) {  
+  #content_wrapper {
+    height:auto;
+    top:80px;
+  }   
+  #start_content, #content {
+    font-size:2em;
+  }
+  #start_content .cont_element {
+    display:inline-block;
+    float:left;
+    width:43%;    
+    border-right:none;    
+  }
+  #start_content .cont_element:first-child {
+    border-right:1px solid #FFF;
+  }
+  #start_content .cont_element:last-child {
+    margin-top:5em;
+    width:94%;
+  }  
+  #menoben .menu {
+    width:50%;
+  }
+  #menoben .menu > li ul.sub-menu > li {
+    font-size:1em;
+    line-height:2.5em;
+  }
+  #sidebar_oben {
+    display:none;
+  }  
+    
+  #sidebar_unten {
+    display:block;
+  }
+} 
+ 
+@media (max-width:640px) {
+  #content_wrapper {
+    top:80px;
+  }
+  #start_content .cont_element {
+    position:static;
+    float:none;
+    width:94%;
+    height:auto;
+    border-right:none;
+    margin-top:5em;        
+  }   
+  #start_content .cont_element:first-child {
+    border-right:none;    
+    margin-top:0;
+  }  
+  #menoben .menu {
+    width:50%;
+  }
+  #menoben .menu > li ul.sub-menu > li {
+    font-size:1em;
+    line-height:3em;
+  }
+}
+
+@media (max-width:512px) {
+  #wrapper {
+    width:100%;
+  }
+  #header {
+    width:100%;
+    text-align:center;
+  }
+  #header_bg {
+    display:none;
+  }
+  #logo {
+    width:90%;
+    margin: 0 auto;
+  }
+  #sidebar_oben {
+    display:none;
+  }  
+  #gallery_footer {
+    display:none;
+  }
+  #content_wrapper {
+    top:0;
+    left:0;
+    position:static;
+    float:left;
+    height:auto;
+  }  
+  #menmob_oben, #menmob_unten {
+    display:block;
+  }
+  #menmob_oben {
+    display:block;
+  }
+  #menoben {
+    float:none;
+    text-align:right;
+    width:100%;
+    margin:0;  
+  }  
+  #menoben .menu {
+    float:left;
+    margin:0;
+    width:100%;
+    background:url(./images/header_bg.png);
+    padding:0;
+    text-align:left;
+  }
+  #menoben .menu div {
+    width:100%;  
+  }
+  #menoben .menu li {
+    position:relative;
+    font-size:2em;
+    list-style-type:none;
+    display:block;
+    width:96%;
+    line-height:4em;
+    margin-bottom:0.3em;
+    margin-left:2%;
+    background:transparent;
+    padding-bottom:0;
+    border-bottom: 1px solid #FFF;
+  }
+  #menoben .menu > li {
+    border-bottom: 1px solid #FFF;
+  }
+  #menoben .menu > li.menu-parent-item:hover {
+    border-left:none;
+  }
+  #menoben .menu > li:last-child {
+    border-bottom:none;
+  }
+  #menoben .menu li:first-child {
+    margin-top:0.3em;
+  }
+  #menoben .menu > li > ul {
+    visibility:visible;
+  }
+  #menoben .menu > li ul.sub-menu {
+    background:transparent;
+    border-left: none;
+    left: 3px;
+    list-style-type: none;
+    margin-top: 0;
+    padding: 0;
+    position:static;
+    text-align: left;
+    text-decoration: none;
+    top: 0;
+  }
+  #menoben .menu >li > ul > li {
+    border-bottom:none;
+    font-size:0.8em;
+    text-align:left;
+  }
+  #menoben .menu > li ul.sub-menu > li a {
+    font-size:0.8em;
+    background:transparent;
+  }
+  #menoben .menu li:hover > a {
+    color:#FFF;
+  }
+  #menoben .menu li > a:hover {
+    color:#FF700B;
+  }
+  #menoben .menu li .knopf {
+    position:absolute;    
+    top:10px;
+    right:10px;
+    z-index:10;
+    cursor:pointer;
+  }
+  #menoben .menu li a {
+    float:none;
+    color:#FFF;
+    font-size:1em;  
+    text-decoration:none;
+    width:100%;
+  }
+  #menoben .menu > ul li a {
+    text-align:center;
+  }
+  #menoben .menu li a:hover{
+    color:#FF700B;
+  }
+  #menoben .menu > li ul {
+    display:block;
+  } 
+  .gallery dl {
+    width:40%;
+  }
+  .gallery dl:nth-child(odd) {
+    margin-left:6%;
+  }
+  .gallery dl:nth-child(even) {
+    margin-left:0;
+  }
+  .attachment-thumbnail {
+    width:80%;
+    margin:10% auto;
+  }
+}   
+
+@media (min-width:513px) {
+  #menue_mobil_switch {
+    display:none;
+  }
+  #header_bg {    
+    height:40px;
+  } 
+}
+@media (min-width:640px) { 
+  body {
+    font-size:10px;
+  }
+  #logo {
+    margin-top:0;
+  }
+  #header_bg {    
+    height:40px;
+  }    
+}
+
+@media (min-width:769px) {
+  #content_wrapper {
+    top:100px;
+  }
+  body {
+    font-size:12px;
+  }
+  #header_bg {    
+    height:50px;
+  }  
+}
+
+@media (min-width:1024px) { 
+  #content_wrapper {
+    top:180px;
+  }
+  body {
+    font-size:16px;
+  }
+  #logo {
+    margin-top:4px;
+  }
+  #header_bg {    
+    height:60px;
+  }  
+  #menoben .menu > li ul.sub-menu {
+    top:0.3em;
+  }
+}
+
+@media (min-width:1152px) { 
+  body {
+    font-size:18px;
+  }
+  #logo {
+    margin-top:8px;
+  }
+  #header_bg {    
+    height:70px;
+  }  
+  #menoben .menu > li ul.sub-menu {
+    top:0.465em;
+  }
+  #menoben .menu > li ul.sub-menu > li {
+    font-size:0.7em;      
+  }
+}
+
+@media (min-width:1280px) { 
+  body {
+    font-size:20px;
+  }
+  #header_bg {    
+    height:80px;
+  }
+  #logo {
+    margin-top:12px;
+    width:450px;
+  }   
+  #menoben .menu > li ul.sub-menu > li {
+    font-size:0.6em;      
+  }
+}
+  
+  
+  
+/* Ergaenzungen fuer Plugins */
+
+/* My Calendar */
+#start_content .widget {
+  list-style-type:none; 
+  padding-left:0;
+  margin-left:0; 
+}
+.my-calendar-nav ul li a {
+  font-size:1em !important;
+}
+.mc-main .calendar-events {
+  left:0 !important;
+  padding:0 !important;
+}
+.mc_edit_links {
+  display:none !important;
+}
+#upcoming-events .future-event .datebutton{
+  background:#DDD;
+  border:1px solid #666;
+  border-radius:5px;
+  moz-border-radius:5px;
+  color:#000 !important;
+  display:inline;
+  padding:3px;
+}
+.mc-format a {
+  color:#000 !important;
+}
+.mc-format a:hover {
+  color:#FF700B !important;
+}
+.datebutton {
+  font-size:0.8em;
+  border:1px solid #666;
+  background:#DDD;
+  padding:5px;
+  white-space: nowrap;
+  color:#000;
+  display:inline-block;
+  border-radius:5px;
+  moz-border-radius:5px;
+  margin-bottom:5px;
+}
+
