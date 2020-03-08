@@ -2,7 +2,7 @@
 In diesen Repository sammle ich alle Informationen, die ich zu der Segelgruppe FH Kiel online finden kann.
 Ziel ist es, eine neue Webseite zu gestalten, die alle wichtige Informationen übersichtlich präsentiert.
 
-# Struktur
+## Struktur
 Ich schlage folgende Dokumentenstruktur vor:
 
 * Homepage
@@ -22,14 +22,14 @@ Ich schlage folgende Dokumentenstruktur vor:
 * Schnuppersegeln
 * Impressum
 
-# Homepage
+## Homepage
 Enthält eine kurze Begrüßung und Erklärung, wer wir sind und was wir machen.
 
 Zusätzlich werden eine Liste der aktuellen Neuigkeiten präsentiert. 
 Diese kann vom Vorstand/Schriftführer laufend aktualisiert werden und enthält öffentliche Ankündigungen (z.B. Bootsarbeiten, Slippen, aber auch Fotos vom letzten Törn).
 Vereinsinterne Ankündigungen, die datenschutzrechtlich relevante Informationen enthalten, gehören nicht dazu.
 
-#  Boote 
+##  Boote 
 Zu jedem Boot existiert eine eigene Seite mit folgenden Informationen:
 
 * Foto des Bootes
@@ -43,7 +43,7 @@ Zu jedem Boot existiert eine eigene Seite mit folgenden Informationen:
 Darüber hinaus können weiterführende Informationen zu dem Boot verlinkt werden (z.B. Konstruktionsskizzen, Informationen zu den Rettungseinrichtungen, etc.), 
 die unter anderem auch für die Bootspflege relevant sein können.
 
-# Verein
+## Verein
 In dieser Kategorie sind alle Informationen enthalten, die das Vereinsrecht und unsere interne Regelungen (z.B. Bootserlaubnis) betreffen.
 
 Die _Vereinssatzung_ wird als PDF verlinkt.
@@ -56,13 +56,13 @@ Unter _Mitgliedsantrag_ ist eine PDF verlinkt, mit der man einen Antrag auf Mitg
 
 Unter _Vormerkbuch_ wird auf das Vereinsintere Vormerkbuch für die Botte verlinkt.
 
-# Termine
+## Termine
 Der Menüpunkt _Termine_ enthalt eine Tabellarische Auflistung aller relevanter Termine für das aktuelle Vereinsjahr (z.B. Bootsarbeiten, Slippen, Werbeaktionen, Schnuppersegeln).
 Alternativ kann auch auf einen Kalender verlinkt werden, sofern dieser regelmäßig gepflegt wird.
 
-# Schnuppersegeln
+## Schnuppersegeln
 Hier werden alle Informationen zum Schnuppersegeln inklusive kommender Termine aufgelistet.
 Dieses Seite richtet sich an Vereinsexterne und sollte auch erklären worauf es ankommt (z.B. Wetterfeste Kleidung, Sonnenbrille, Sonnencreme, etc.).
 
-# Impressum
+## Impressum
 Enthält alle gesetzlich vorgeschriebenen Informationen zur Anschrift und Verantwortlichkeiten inklusive der Datenschutzbelehrung und Haftungsausschluss für externe Links. 
