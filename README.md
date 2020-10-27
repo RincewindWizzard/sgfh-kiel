@@ -65,4 +65,7 @@ Hier werden alle Informationen zum Schnuppersegeln inklusive kommender Termine a
 Dieses Seite richtet sich an Vereinsexterne und sollte auch erklären worauf es ankommt (z.B. Wetterfeste Kleidung, Sonnenbrille, Sonnencreme, etc.).
 
 ## Impressum
-Enthält alle gesetzlich vorgeschriebenen Informationen zur Anschrift und Verantwortlichkeiten inklusive der Datenschutzbelehrung und Haftungsausschluss für externe Links. 
+Enthält alle gesetzlich vorgeschriebenen Informationen zur Anschrift und Verantwortlichkeiten inklusive der Datenschutzbelehrung und Haftungsausschluss für externe Links.
+
+## Was fehlt noch?
+Logo der Segelgruppe als SVG Datei
